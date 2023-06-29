@@ -1,0 +1,266 @@
+:root {
+  --neutral: #f9f4fb;
+  --pink: #b52184;
+  --blue: #312d64;
+  --white: #ffffff;
+  --gradient: linear-gradient(134deg, #343193 0%, #302c63 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--neutral);
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+main {
+  margin: 0 auto;
+  min-width: 375px;
+}
+
+.content {
+  padding: 0 3rem;
+  margin: 0 auto;
+}
+.hero .content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 67.9rem;
+}
+
+.hero .content .text {
+  max-width: 100%;
+  text-align: center;
+}
+
+.hero .content .text h1 {
+  color: var(--pink);
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin-bottom: 0.8rem;
+}
+
+.hero .content .text p {
+  font-size: 1.4rem;
+  margin-bottom: 3.5rem;
+}
+
+.hero .content .text a {
+  animation: float 3s infinite;
+  display: block;
+}
+
+.hero .content > img {
+  max-width: 36.4rem;
+  margin-bottom: 1.7rem;
+}
+
+.topics {
+  background: var(--gradient);
+}
+
+.topics ul {
+  list-style: none;
+  display: grid;
+  gap: 6rem;
+  grid-template-columns: 1fr;
+  padding-top: 5.2rem;
+  padding-bottom: 5.2rem;
+}
+
+.topics ul li {
+  background: var(--white);
+  border-radius: 19px;
+  padding: 2.3rem;
+}
+
+.topics ul li h2 {
+  color: var(--pink);
+  font-weight: 900;
+  font-size: 2.9rem;
+  margin: 3.3rem 0 1.9rem;
+}
+
+.topics ul li p {
+  font-size: 1.6rem;
+}
+
+.contact .content {
+  padding-top: 7.2rem;
+  padding-bottom: 7.2rem;
+}
+
+.contact .content h2 {
+  color: var(--pink);
+  font-size: 3.2rem;
+  margin-bottom: 4.3rem;
+}
+
+.contact .content form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.4rem;
+}
+
+.contact .content form .group {
+  background: var(--white);
+  border: 1.5px solid var(--blue);
+  border-radius: 16px;
+  padding: 1.2rem 1.4rem 1.2rem;
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.contact .content form .group input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.contact .content form textarea {
+  border: 1.5px solid var(--blue);
+  border-radius: 16px;
+  padding: 1.2rem 1.4rem 1.2rem;
+  height: 9.8rem;
+  width: 100%;
+  outline: none;
+}
+
+.contact .content form button {
+  background: var(--gradient);
+  color: var(--white);
+  font-size: 1.4rem;
+  border: none;
+  line-height: 2.4rem;
+  padding: 1.6rem;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+footer {
+  color: var(--white);
+  background: var(--gradient);
+  text-align: center;
+  font-size: 1.938rem;
+  padding: 1.6rem;
+  min-width: 375px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    max-width: 144rem;
+    padding: 0 10rem;
+  }
+  .hero {
+    position: relative;
+  }
+  .hero .content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 83rem;
+  }
+  .hero .content .text {
+    text-align: left;
+    max-width: 40%;
+  }
+  .hero .content .text h1 {
+    font-size: 5.8rem;
+  }
+  .hero .content .text p {
+    font-size: 3.2rem;
+    margin-bottom: 16.9rem;
+  }
+  .hero .content > img {
+    position: absolute;
+    max-width: 60%;
+    top: 0;
+    right: 2%;
+  }
+  .topics ul {
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+  }
+  .topics ul li {
+    border-radius: 24px;
+    padding: 3.2rem;
+  }
+  .topics ul li h2 {
+    font-size: 3.53rem;
+    margin: 4rem 0 2.4rem;
+  }
+
+  .topics ul li p {
+    font-size: 1.9rem;
+  }
+  .contact {
+    background: url("./images/stars.png") no-repeat right center;
+  }
+  .contact .content {
+    max-width: 144rem;
+    padding-top: 9.4rem;
+    padding-bottom: 9.4rem;
+  }
+  .contact .content form {
+    max-width: 60rem;
+    margin-left: 0;
+  }
+  .contact .content h2 {
+    font-size: 4.2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content {
+    padding: 0 6.4rem;
+  }
+  .hero .content .text {
+    max-width: 50%;
+  }
+  .hero .content > img {
+    max-width: 64rem;
+    right: 6%;
+  }
+  .topics ul {
+    gap: 3rem;
+  }
+}
+@media (min-width: 1600px) {
+  .hero .content > img {
+    right: 15%;
+  }
+}
